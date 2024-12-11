@@ -33,13 +33,11 @@ const App = () => {
       files: [],
     });
   };
-  const filter2 =(item,index)=>{
-    
-    const dataListNew= dataList.filter((item)=>{
-      return item.index!==index;
-    })
+  const filter2 = (indexToRemove) => {
+    const dataListNew = dataList.filter((_, index) => index !== indexToRemove);
     setDataList(dataListNew);
-  }
+  };
+  
   return (
     <div className="container">
       <div className="row mt-4">
